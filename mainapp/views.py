@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .parser import placeParsing
 
+def home(request):
+    return render(request, 'main.html')
+    
 def info(request):
     res = placeParsing()
 
