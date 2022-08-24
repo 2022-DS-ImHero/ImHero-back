@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/crew.css' %}">
+    <script src="https://kit.fontawesome.com/fc13d61e87.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+Double+Pica" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+English" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <title>crew</title>
+</head>
+<body>
+    
+        {% include 'nav.html' %}
+
+        <div class="logo-container">
+            <i class="fa-solid fa-water" onclick="shownav();"></i>
+            <p>LOGO</p>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a  href="" class="MP">My Page</a>
+        </div>
+
+        <div class="crew-main">
+            <div class="c-title">Making Crew</div>
+            <div class="c-search">
+                <i class="fa-solid fa-magnifying-glass"></i>search ...
+                <a href="{% url 'uploadCrew' %}"><i class="fa-solid fa-pen"></i></a>
+            </div>
+        </div>
+        <div class="findTag">
+            <select>
+                <option value="게임">게임</option>
+                <option value="예술/디자인">예술/디자인</option>
+                <option value="뷰티/패션">뷰티/패션</option>
+                <option value="IT/테크">IT/테크</option>
+                <option value="건설">건설</option>
+                <option value="반려동물">반려동물</option>
+                <option value="광고/마케팅">광고/마케팅</option>
+                <option value="여행">여행</option>
+                <option value="교육">교육</option>
+                <option value="바이오/의료">바이오/의료</option>
+                <option value="법률/계약">법률/계약</option>
+                <option value="소셜벤처">소셜벤처</option>
+                <option value="운동/헬스케어">운동/헬스케어</option>
+                <option value="콘텐츠/커뮤니티">콘텐츠/커뮤니티</option>
+            </select> 
+        </div>
+
+        
+        {% for tag in tags %}
+        <a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
+        {% endfor %}
+
+        
+        <div class="c-content">
+           
+
+            {% for post in posts %}
+            
+            <a href="">
+                <img src="{% static 'img/profile.jpg' %}">
+                <div class="crewDiv">
+                    <div class="crewT">{{ post.title }}</div>
+                    <div class="TageName">
+                        {% if post.tags.exists %}
+                            <i class="fas fa-tags"></i>
+                            {% for tag in post.tags.all %}
+                                <a href="{{ tag.get_absolute_url }}"><span class="badge bg-light">{{ tag }} </span></a>
+                            {% endfor %}
+                            
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+
+            {% endfor %}
+
+            {% if post_list.exists %}
+            {% for p in post_list %}
+            <a href="">
+                <img src="{% static 'img/profile.jpg' %}">
+                <div class="crewDiv">
+                    <div class="crewT">{{ p.title }}</div>
+                    <div class="TageName">
+                        {% if p.tags.exists %}
+                            <i class="fas fa-tags"></i>
+                            {% for tag in p.tags.all %}
+                                <a href="{{ tag.get_absolute_url }}"><span class="badge bg-light">{{ tag }} </span></a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+            {% endif %}
+            
+        </div>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
