@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+Double+Pica" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+English" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    
     <title>main</title>
 </head>
 <body>
@@ -20,13 +21,13 @@
 
     <div class="profile"></div>
     <div class="name">My Name</div>
-    <div class="mypage"><a href="">My Page</a>
+    <div class="mypage"><a href="{% url 'mypage' %}">My Page</a>
     <img class="duck" src="{% static 'img/duck.png' %}">
     </div>
 
     <div class="nav-2">
         <ul>
-            <li><i class="fa-solid fa-droplet"></i><a href="">Idea Note</a></li>
+            <li><i class="fa-solid fa-droplet"></i><a href="{% url 'ideaNote' %}">Idea Note</a></li>
             <li><i class="fa-solid fa-droplet"></i><a href="">Making Crew</a></li>
             <li><i class="fa-solid fa-droplet"></i><a href="">Challenge</a></li>
             <li><i class="fa-solid fa-droplet"></i><a href="">Information</a></li>

@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/ideaUp.css' %}">
+    <script src="https://kit.fontawesome.com/fc13d61e87.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+Double+Pica" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+English" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <title>ideaup</title>
+</head>
+<body>
+        {% include 'nav.html' %}
+
+        <div class="logo-container">
+            <i class="fa-solid fa-water" onclick="shownav();"></i>
+            <p><a href="{% url 'home' %}">LOGO</a></p>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="{% url 'mypage' %}" class="MP">My Page</a>
+        </div>
+
+        <div class="idea-main">
+            <div class="i-title">Idea Note</div>
+            <div class="i-search"><i class="fa-solid fa-magnifying-glass"></i>search ...</div>
+        </div>
+
+        <div class="idea-content">
+            <a href="">
+                <div class="MemoDiv">
+                    창업 비용,
+                    인테리어 견적
+                    계산해보기
+                <div class="MemoT">제목</div>
+                <div class="MemoD">날짜</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="MemoDiv">
+                    <div class="MemoT">제목</div>
+                    <div class="MemoD">날짜</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="addIdea">
+            <a href="{% url 'uploadIdea' %}"><i class="fa-solid fa-file-pen"></i></a>
+        </div>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

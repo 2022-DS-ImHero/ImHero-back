@@ -1,9 +1,19 @@
+from pickletools import read_uint1
 from django.shortcuts import render
 from .parser import placeParsing
 
 def home(request):
     return render(request, 'main.html')
+
+def ideaNote(request):
+    return render(request, 'ideaNote.html')
     
+def uploadIdea(request):
+    return render(request, 'uploadIdea.html')
+
+def mypage(request):
+    return render(request, 'mypage.html')
+
 def info(request):
     res = placeParsing()
 
