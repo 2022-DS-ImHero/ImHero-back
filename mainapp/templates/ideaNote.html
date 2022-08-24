@@ -29,82 +29,17 @@
         </div>
 
         <div class="idea-content">
+            
+            {% for post in posts %}
             <a href="">
                 <div class="MemoDiv">
-                    창업 비용,
-                    인테리어 견적
-                    계산해보기
-                <div class="MemoT">제목</div>
-                <div class="MemoD">날짜</div>
+                    {{ post.content }}
+                <div class="MemoT">{{ post.title }}</div>
+                <div class="MemoD">{{ post.created | date:'Y.m.d' }}</div>
                 </div>
             </a>
-
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
-            <a href="">
-                <div class="MemoDiv">
-                    <div class="MemoT">제목</div>
-                    <div class="MemoD">날짜</div>
-                </div>
-            </a>
+            {% endfor %}
+            
         </div>
 
         <div class="addIdea">

@@ -1,5 +1,14 @@
 @import 'total.css';
 
+.uploadBtn {
+    
+    width: 67px;
+    height: 51px;
+    font-size: 22px;
+    line-height: 22px;
+    font-family: 'Inter';
+    color: black;
+}
 .fa-angle-left{
     font-size: 25px;
 }

@@ -14,20 +14,23 @@
     <title>upload</title>
 </head>
 <body>
-    
+    <form class="up-c" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
         <div id="upload-line">
             <div class="logo-container" >
                 <i class="fa-solid fa-angle-left"></i>
-                <a  href="" class="c">완료</a>
+                <input class="c" id="uploadBtn" type="submit" value="완료"></input>
+
             </div>
         </div>
 
-        <form class="up-c">
+
             <div class="uploadTitle_div">
-                <input class="uploadTitle" type="text" placeholder="제목"> 
+                {{ form.title }}
             </div>
             <div class="uploadTextarea_div">
-            <textarea class="uploadTextarea" placeholder="아이디어를 입력해주세요"></textarea>
+                {{ form.content }}
             </div>
         </form>
         
