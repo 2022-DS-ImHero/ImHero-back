@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+Double+Pica" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+English" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <title>main</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         
         <div class="logo-container">
             <i class="fa-solid fa-water" onclick="shownav();"></i>
-            <p><a href="{% url 'home' %}">LOGO</a></p>
+            <p><a href="{% url 'home' %}"><img src="{% static 'img/logosea.png' %}" width="50px" height="50px"></a></p>
             <i class="fa-solid fa-magnifying-glass"></i>
 
             {% if user.is_authenticated %} 
@@ -31,12 +32,11 @@
         </div>
 
 
-
         <div class="outer">
             <div class="inner-list">
                 <div class="inner" id="banner-1">
-                    <p>SERVICE NAME</p>           
-                    <p>SERVICE NAME에서는 마음속에만 담아뒀던<br>
+                    <p>DUK<strong class="s">S</strong>UNG ID<strong class="s">E</strong>A CH<strong class="s">A</strong>LLENGE</p>           
+                    <p>S.E.A에서는 마음속에만 담아뒀던<br>
                         아이디어를 구체화할 수 있습니다.<br>
                         기회가 없어 미처 세상 밖으로 꺼내지 못한 아이디어들을<br>
                         마음껏 적어보고 자유롭게 교류하며 성장시켜보세요.
@@ -57,60 +57,89 @@
             <i class="button-left fa-solid fa-chevron-left"></i>
             <i class="button-right fa-solid fa-chevron-right"></i>
         </div>
-
+        
+        
+            <div class="intro-ser">서비스 소개</div>
+        <div class="intro">
+            <div class="intro1">
+                <img class="logo-w"src="/static/img/logo.png">
+                    <p class="it-c1">S.E.A는 바닷속을 헤엄치는 자유로운 고래처럼, <br>
+                            덕성여자대학교 학생들이 자유롭게<br>
+                            아이디어를 공유할 수 있는 서비스입니다.<br>
+                            S.E.A의 로고는 이러한 의미를 담고 있습니다.</p></td>
+            </div>
+            <div class="intro1">
+                <p class="it-t">S.E.A의 지향점</p>
+                <p class="it-c2">코로나로 인해 선후배 교류와 학회 참여 기회가 줄어들면서 <br>
+                    학생들이 아이디어를 표출할 기회가 적어졌습니다. <br>
+                    저희의 서비스를 통해 학생들 간에 활발한 아이디어 공유와 교류를<br>
+                    가능하게 하는 것이 저희의 지향점입니다.</p>
+            </div>
+        </div>
 
         <div class="main-container">
+            <div class="li2">
+
             
-            <div id="m1">
+            <li><div id="m1">
                 <div class="main-t"><i class="fa-solid fa-droplet"></i>
                     <a href="" class="go-idea">Idea Note</a>
                 </div>
                 <div class="content-nav" id="dive">D
-                    <div class="hide">
-                            마음속에 담아뒀던<br>
-                            아이디어를<br>
-                            마음껏 펼쳐보세요</div>
-                    </div>
-            </div>
-            
-            <div id="m2">
+
+            </div></li>
+            <li>
+                <div id="m2"  >
                 <div  class="main-t"><i class="fa-solid fa-droplet"></i>
                     <a href="" class="make-crew">Making Crew</a>
                 </div>
                 <div class="content-nav" id="dive">I
-                <div class="hide">
-                    혼자라 막막하다면<br>
-                    마음이 맞는 팀원을<br>
-                    찾아보세요</div>
-                </div>
+                
+            </div>
+
+            </li>
+
+            <li class="info22">Idea Note는 자유롭게 아이디어를 작성하고 편집할<br> 수 있는 혼자만의 메모 공간입니다. <br><br> Making Crew는 함께할 팀원을 모집하고 싶은 사용자가<br>
+                아이디어 개요를 작성하고, 모집 공고를 올리면 관심 있는 사용자들이<br> 지원할 수 있는 기능입니다.</li>
             </div>
             
-            <div id="m3">
-                <div  class="main-t"><i class="fa-solid fa-droplet"></i>
-                    <a href="" class="challenge">Challenge </a>
-                </div>
-                <div class="content-nav" id="dive">V
-                <div class="hide">
-                    직접 멘토들의 과제를<br>
-                    해결해보면서<br>
-                    실전 감각을 익혀보세요</div>
-                </div>
-            </div>
             
-            <div id="m4">
+            <div class="li3">
+
+            <li><div id="m3">
                 <div  class="main-t"><i class="fa-solid fa-droplet"></i>
-                    <a href="" class="info">Information</a>
+                    <a href="" class="challenge">Information</a>
                 </div>
                 <div class="content-nav" id="dive">E
-                <div class="hide">
-                    시작이 막막할때는<br>
-                    창업 관련 정보를<br>
-                    훑어보세요</div>
+                
+            </div></li>
+            <li><div id="m4">
+                <div  class="main-t"><i class="fa-solid fa-droplet"></i>
+                    <a href="" class="info">Challenge</a>
                 </div>
+                <div class="content-nav" id="dive">V
+                
+            </div></li>
+            
+            <li class="info33">Challenge는 멘토가 과제를 내면 멘티가 과제를<br>
+                수행하는 기능입니다. 멘토에게 아이디어가 채택되면 <br>
+                포인트가 쌓이고, 포인트 순으로 랭킹이 발표됩니다.<br><br>Information는 창업 공간 정보 제공하고, 스타트업<br>강연 소개, 공모전 알림 등 정보를 제공합니다.
+            </li>
+            
+            
+
+            </div>
+            
+        </div>
+
+        <div class="footer1">
+            <div class="use">이용약관.개인정보처리방침</div>
+            <div class="name">
+                Team. IM HERO<br>
+            Developer. 한진경 /  노하림<br>
+            Designer. 신서영 /  안은현
             </div>
 
-
-            
         </div>
 
     <script src="{% static 'js/main.js' %}"></script>
