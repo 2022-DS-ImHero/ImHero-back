@@ -16,7 +16,7 @@ def login(request):
         user = authenticate(request=request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('home')
+            return redirect('mypage')
         return redirect('login')
     else:
         form = LoginForm()
@@ -29,7 +29,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             auth.login(request,user)
-            return redirect('home')
+            return redirect('mypage')
         return redirect('signup')
     else:
         form = UserCreationForm()
