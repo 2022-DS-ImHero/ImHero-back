@@ -30,7 +30,8 @@
         </div>
 
         <div class="cha-content">
-            <p>교수자</p>
+            <p style="font-size: 20px;margin-left: 30px;"
+            >교수자</p>
             <br>
         <div class="pro">
 
@@ -52,7 +53,7 @@
             {% endfor %}
         </div>
 
-            <p>기업</p>
+            <p style="font-size: 20px;margin-left: 30px;">기업</p>
             <br>
             <div class="com">
                 {% for post in c_posts %}
@@ -74,7 +75,7 @@
                 
             </div>
 
-            <p>동문</p>
+            <p style="font-size: 20px;margin-left: 30px;">동문</p>
             <div class="sen">           
                 {% for post in s_posts %}
                 <a href="{% url 's_detail' post.id %}">

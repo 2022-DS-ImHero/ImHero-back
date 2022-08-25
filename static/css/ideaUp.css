@@ -42,205 +42,6 @@
 }
     }
     
-@media screen and (max-width:1280px) {
-/* 타블렛 가로 */ 
-
-.MemoDiv{
-    box-sizing: border-box;
-    width: 25vw;
-    height: 130px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: 
-    #DAEDFF;
-    margin-left: 6%;
-}
-
-.idea-content .MemoT{
-    margin-top: 11px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 24vw;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 10px;
-}
-
-.idea-content .MemoD{
-    margin-top: 4px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 24vw;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-
-    font-size: 12px;
-    line-height: 10px;
-}
-
-}
-@media screen and (max-width:899px) {
-     
-.MemoDiv{
-    box-sizing: border-box;
-    width: 30vw;
-    height: 130px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: 
-    #DAEDFF;
-}
-
-.idea-content .MemoT{
-    margin-top: 11px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 28vw;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 10px;
-}
-
-.idea-content .MemoD{
-    margin-top: 4px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 28vw;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-
-    font-size: 12px;
-    line-height: 10px;
-}
-}
-
-@media screen and (max-width:599px) {
-    /* 모바일 세로 */
- 
-    .MemoDiv{
-        box-sizing: border-box;
-        width: 23vw;
-        height: 130px;
-        display: inline-block;
-        border-radius: 10px;
-        padding: 6px;
-        background-color: 
-        #DAEDFF;
-    }
-    
-    .idea-content .MemoT{
-        margin-top: 11px;
-        background-color: whitesmoke;
-        border-radius: 10px;
-        width: 100px;
-        box-sizing: border-box;
-        padding: 5px;
-        height: 20px;
-        font-size: 12px;
-        line-height: 10px;
-    }
-    
-    .idea-content .MemoD{
-        margin-top: 4px;
-        background-color: whitesmoke;
-        border-radius: 10px;
-        width: 100px;
-        box-sizing: border-box;
-        padding: 5px;
-        height: 20px;
-    
-        font-size: 12px;
-        line-height: 10px;
-    }
-}
-
-@media screen and (max-width:420px) {
-    /* 모바일 세로 */
-    
-.MemoDiv{
-    box-sizing: border-box;
-    width: 28vw;
-    height: 130px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: 
-    #DAEDFF;
-}
-
-.idea-content .MemoT{
-    margin-top: 11px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 100px;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 10px;
-}
-
-.idea-content .MemoD{
-    margin-top: 4px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 100px;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-
-    font-size: 12px;
-    line-height: 10px;
-}
-    }
-
-@media screen and (max-width:400px) {
-    /* 모바일 세로 */
-    
-.MemoDiv{
-    box-sizing: border-box;
-    width: 30vw;
-    height: 130px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: 
-    #DAEDFF;
-}
-
-.idea-content .MemoT{
-    margin-top: 11px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 100px;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 10px;
-}
-
-.idea-content .MemoD{
-    margin-top: 4px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 100px;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 20px;
-
-    font-size: 12px;
-    line-height: 10px;
-}
-}
 
 
 
@@ -355,7 +156,7 @@
 }
 
 
-.close-area {
+.close-area{
     width: 15vh;
     height: 4vh;
     background: #000000;
@@ -374,6 +175,7 @@
     margin: 0 auto;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    margin-left: 760px;
 }
 
 .contents {
