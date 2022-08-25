@@ -12,7 +12,6 @@
     <title>signup</title>
 </head>
 <body>
-    <div class="container">
         <div id="logo-line">
             <div class="logo-container">
                 <p>LOGO</p>
@@ -23,6 +22,7 @@
             <i class="fa-solid fa-x"></i>
             <div class="signup-t">SignUp</div>
         </div>
+
         <form action="{% url 'signup' %}" method="post">
             {% csrf_token %}
         <div class="choice">
@@ -34,37 +34,36 @@
             <img src="{% static 'img/Rectangle 4171.png' %}">
             <img src="{% static 'img/Rectangle 4172.png' %}">
             <br>
-            {{ form.is_mentor }}
-
-
-            <div class="choiceT">
-                <p>mentor</p>
-                <p>mentee</p>
-                <p>교수, 기업, <br>선배 창업자</p>
-                <p>학생</p>
-            </div>
             
+            <div class="dd">
+                 {{ form.is_mentor }}
+            </div>
+           
+            
+            
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
-        
+        <form>
             <p>이름</p>{{ form.name }} 
             <br>
+           
             <br>
             <p>이메일</p>{{ form.email }} 
             <br>
+           
             <br>
             <p>아이디</p>{{ form.username }} 
             <br>
+            
             <br>
             <p>비밀번호</p>{{ form.password1 }} 
             <br>
-            <br>
-            <p>비밀번호 확인</p>{{ form.password2 }} 
-            <br>
-
-            <button class="singup-btn" type="submit">sign up </button>
         </form>
 
+        <button class="singup-btn">sign up</button> 
         
-    </div>
 </body>
 </html>
