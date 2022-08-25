@@ -46,9 +46,20 @@
             <button type="submit" class="cha-sub">제출하기</button>
         </div>
         
+        <div class="commentSection">
+            <div>댓글 목록 ( {{ post.comment_set.all.count }} )</div>
+            {% for comment in post.comment_set.all %}
+            <p>{{ comment }}</p>
+            <hr>
+            {% endfor %}
 
+            <form method="POST" action="{% url 'create_comment' post.id %}">
+                {% csrf_token %}
+                {{ comment_form }}
+                <input type="submit">
+            </form>
 
-
+        </div>
     
     <script src="{% static 'js/main.js' %}"></script>
 </body>
