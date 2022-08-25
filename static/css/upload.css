@@ -46,6 +46,13 @@
     text-align: center;
 }
 
+#uploadBtn{
+    font-size: 20px;
+    margin-right: 1px;
+    border: none;
+    background: #DAEDFF;
+    border-radius: 20px;
+}
 .open{
     width: 30px;
     height: 30px;
@@ -74,10 +81,16 @@ form input::file-selector-button {
     float: left;
     margin-left: 2%;
     margin-bottom: 1%;
+    margin-top: -35px;
 }
 
 .menuInput2{
     font-size: 30px;
     float: right;
     margin-right: 1%;
+}
+
+.select{
+    margin-top: 10px;
+    float: left;
 }

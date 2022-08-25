@@ -32,20 +32,22 @@
             </div>
         </div>
 
-        
+        <div class="taglist">
         {% for tag in tags %}
-        <a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
+        
+            <a class="tag-content" href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
+        
         {% endfor %}
-
+        </div>
         
         <div class="c-content">
-           
 
             {% for post in posts %}
             
             <a href="">
                 <img src="{% static 'img/profile.jpg' %}">
                 <div class="crewDiv">
+                    
                     <div class="crewT">{{ post.title }}</div>
                     <div class="TageName">
                         {% if post.tags.exists %}
@@ -69,7 +71,7 @@
                     <div class="crewT">{{ p.title }}</div>
                     <div class="TageName">
                         {% if p.tags.exists %}
-                           
+
                             {% for tag in p.tags.all %}
                             <a href="{{ tag.get_absolute_url }}"><span class="badge bg-light">#{{ tag }} </span></a>
                             {% endfor %}

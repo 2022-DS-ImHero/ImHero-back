@@ -6,14 +6,19 @@
     width: 280px;
     height: 90vh;
     z-index: 100;
-    background: rgba(40, 90, 169, 0.88);
+    background: url('/static/img/pool1.jpg');
+    background-size: cover;
     border-top-right-radius: 30px;
+    opacity: 0.95;
 }
 .navbar a{
     color: white;
     text-decoration: none;
 }
-
+.profile{
+    background-image: url('/static/img/whale.png');
+    background-size: cover;
+}
 .navbar a:hover{
     color : #000000
 }

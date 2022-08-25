@@ -20,7 +20,7 @@
     <i class="fa-solid fa-x" onclick="hidenav();"></i>
 
     <div class="profile"></div>
-    <div class="name">My Name</div>
+    <div class="name">{{ user.name }}</div>
     <div class="mypage"><a href="{% url 'mypage' %}">My Page</a>
     <img class="duck" src="{% static 'img/duck.png' %}">
     </div>
