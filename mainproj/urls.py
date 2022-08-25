@@ -22,12 +22,19 @@ import mainapp.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/',include('account.urls')),
+
     path('', views.home, name='home'),
+
     path('ideanote/', views.ideaNote, name='ideaNote'),
-    path('upload_idea/', views.uploadIdea, name='uploadIdea'),
+    # path('upload_idea/', views.uploadIdea, name='uploadIdea'),
+
     path('makecrew/', views.makecrew, name='makecrew'),
     path('makecrew/tag/<str:slug>', views.tag_page),
-    path('upload_crew/', views.uploadCrew, name='uploadCrew'),
+    
+    path('upload_crew/', views.CrewPostCreate.as_view(), name='uploadCrew'),
+ 
+    path('challenge/', views.challenge, name='challenge'),
+
     path('info/', views.info, name='info'),
     path('mypage/', views.mypage, name='mypage')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

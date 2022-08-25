@@ -43,9 +43,32 @@
         </div>
 
         <div class="addIdea">
-            <a href="{% url 'uploadIdea' %}"><i class="fa-solid fa-file-pen"></i></a>
+            <i class="fa-solid fa-file-pen" onclick="modalOn();" ></i>
         </div>
     
-    <script src="{% static 'js/main.js' %}"></script>
+
+        <div id="modal2" class="modal-overlay">
+            <div class="modal-window" id="acamodal">
+                <i class="fa-solid fa-x" id="modalX" onclick="modalOff();"></i>
+                <div class="title">Upload</div>
+                <div class="contents">
+                    <form class="up-c" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="uploadTitle_div">
+                            {{ form.title }}
+                        </div>
+                        <div class="uploadTextarea_div">
+                            {{ form.content }}
+                        </div>
+
+                    
+                    </form>
+                    <input class="c" id="uploadBtn" type="submit" value="완료"></input>
+                    <button class="close-area" id="closeaca">완료</button>
+                </div>
+                
+            </div>
+        </div>
+<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 from django import forms
-from .models import IdeaPost, CrewPost
+from .models import IdeaPost, CrewPost, Tag
+
 
 class IdeaPostModelForm(forms.ModelForm):
     class Meta:
@@ -24,7 +25,7 @@ class IdeaPostModelForm(forms.ModelForm):
 class CrewPostModelForm(forms.ModelForm):
     class Meta:
         model = CrewPost
-        fields = ['title', 'content']
+        fields = ['title', 'content', 'tags']       
 
         widgets = {
             'title' : forms.TextInput(
@@ -38,5 +39,5 @@ class CrewPostModelForm(forms.ModelForm):
                     'class' : 'uploadTextarea',
                     'placeholder' : '내용을 입력하세요.'
                 }
-            )
+            ),
         }

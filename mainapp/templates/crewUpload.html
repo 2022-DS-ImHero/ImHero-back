@@ -14,18 +14,17 @@
     <title>crewfind</title>
 </head>
 <body>
-    
+    <form class="up-c" action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        
         <div id="upload-line">
             <div class="logo-container" >
                 <i class="fa-solid fa-angle-left"></i>
-                <a  href="" class="c">완료</a>
+                <input class="c" id="uploadBtn" type="submit" value="완료"></input>
+                
             </div>
         </div>
-
-        <form class="up-c">
-            <div>
-                <input class="findTag" type="text" placeholder="분야를 선택해주세요">
-            </div>
+            {{ form.tags }}
             <div class="uploadTitle_div">
                 {{ form.title }}
             </div>
@@ -43,6 +42,8 @@
 
             
             <div class="uploadTextarea_div">{{ form.content }}
+
+                
             </div>
         </form>
         

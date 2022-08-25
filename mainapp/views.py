@@ -1,17 +1,25 @@
 from pickletools import read_uint1
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .parser import placeParsing
 from .forms import IdeaPostModelForm, CrewPostModelForm
 from .models import IdeaPost, CrewPost, Tag
+from django.views.generic import CreateView
+from django.urls import reverse
+
+class CrewPostCreate(CreateView):
+    
+    template_name = 'crewUpload.html'
+    success_url = '/' #1
+    form_class = CrewPostModelForm #2
+    
+    def get_success_url(self):
+        return reverse('makecrew')
 
 def home(request):
     return render(request, 'main.html')
 
 def ideaNote(request):
     posts = IdeaPost.objects.order_by('-created')
-    return render(request, 'ideaNote.html', {'posts':posts})
-
-def uploadIdea(request):
     if request.method == 'POST':
         form = IdeaPostModelForm(request.POST)
         if form.is_valid():
@@ -19,7 +27,17 @@ def uploadIdea(request):
             return redirect('ideaNote')
     else:
         form = IdeaPostModelForm()
-    return render(request, 'uploadIdea.html', {'form':form})
+    return render(request, 'ideaNote.html', {'posts':posts, 'form':form})
+
+# def uploadIdea(request):
+#     if request.method == 'POST':
+#         form = IdeaPostModelForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('ideaNote')
+#     else:
+#         form = IdeaPostModelForm()
+#     return render(request, 'uploadIdea.html', {'form':form})
 
 def makecrew(request):
     posts = CrewPost.objects.order_by('-created')
@@ -32,16 +50,11 @@ def tag_page(request, slug):
 
     return render(request, 'crew.html',{'post_list' : post_list, 'tag' : tag})
 
-def uploadCrew(request):
-    if request.method == 'POST':
-        form = CrewPostModelForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('crew')
-    else:
-        form = CrewPostModelForm()
-    return render(request, 'crewUpload.html', {'form':form})
+
     
+def challenge(request):
+    return render(request,'challenge.html')
+
 def mypage(request):
     return render(request, 'mypage.html')
 
@@ -50,8 +63,8 @@ def info(request):
 
     cnterName = {}
     
-    
-    for number in range(len(res)):
+    for number in range(30):
         cnterName[res[number]['cnterNm']] = res[number]['adr']  # key: cnterNm, value: adr
 
     return render(request, 'info.html', {'cnterName': cnterName})
+

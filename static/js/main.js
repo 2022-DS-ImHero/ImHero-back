@@ -53,3 +53,24 @@ function hidenav(){
     document.querySelector('.navbar').style.display = 'none'
 }
 
+function plus(){
+
+    var heart = document.querySelector('.fa-heart');
+    heart.style.color = ((heart.style.color =='black')?'red':'black');
+
+}
+
+//modal//
+
+
+function modalOn(){
+const modal2 = document.getElementById("modal2");
+
+    modal2.style.display = 'block';
+    modal2.style.position = 'fixed';
+}
+function modalOff(){
+    const modal2 = document.getElementById("modal2");
+    
+        modal2.style.display = 'none'
+    }
