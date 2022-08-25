@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
-    'account'
+    'account',
+    'challenge'
 ]
 
 MIDDLEWARE = [

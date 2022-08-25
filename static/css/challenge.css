@@ -43,22 +43,13 @@
 
 @media screen and (max-width:1799px) {
     /* 데스크탑 */
-    .cha-content{
-        width: 90vw;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 3%;
-        margin: 0 auto;
-        margin-top:3%;
-    }
     
     .chaDiv{
         width: 13vw;
         height: 32vh;
         background: #ffffff;
         border: 1px solid #CFCFCF;
-        margin-left: 70px;
+        margin-left: 100px;
     }
     
     .cha-content img{
@@ -103,15 +94,7 @@
     
 @media screen and (max-width:1280px) {
 /* 타블렛 가로 */ 
-    .cha-content{
-        width: 90vw;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 10%;
-        margin: 0 auto;
-        margin-top:3%;
-    }
+    
     
     .chaDiv{
         width: 16vw;
@@ -162,15 +145,7 @@
 
 }
 @media screen and (max-width:899px) {
-    .cha-content{
-        width: 90vw;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 10%;
-        margin: 0 auto;
-        margin-top:3%;
-    }
+    
     
     .chaDiv{
         width: 23vw;
@@ -221,15 +196,7 @@
 }
 @media screen and (max-width:599px) {
     /* 모바일 세로 */
-    .cha-content{
-        width: 90vw;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 8%;
-        margin: 0 auto;
-        margin-top:3%;
-    }
+    
     
     .chaDiv{
         width: 33vw;
@@ -281,15 +248,6 @@
 
 @media screen and (max-width:420px) {
     /* 모바일 세로 */
-    .cha-content{
-        width: 90vw;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 8%;
-        margin: 0 auto;
-        margin-top:3%;
-    }
     
     .chaDiv{
         width: 35vw;
@@ -339,8 +297,20 @@
     }
 }
 
-.findTag{
-    width: fit-content;
-    height: fit-content;
-    margin: 0 auto;
+.pro{
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll ;
+}
+
+.com{
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll ;
+}
+
+.sen{
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll ;
 }

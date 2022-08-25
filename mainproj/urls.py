@@ -33,7 +33,7 @@ urlpatterns = [
     
     path('upload_crew/', views.CrewPostCreate.as_view(), name='uploadCrew'),
  
-    path('challenge/', views.challenge, name='challenge'),
+    path('challenge/', include('challenge.urls')),
 
     path('info/', views.info, name='info'),
     path('mypage/', views.mypage, name='mypage'),

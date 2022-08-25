@@ -53,8 +53,8 @@ def tag_page(request, slug):
 
 
     
-def challenge(request):
-    return render(request,'challenge.html')
+# def challenge(request):
+#     return render(request,'challenge.html')
 
 def mypage(request):
     return render(request, 'mypage.html')
