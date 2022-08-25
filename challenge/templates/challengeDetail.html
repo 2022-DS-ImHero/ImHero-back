@@ -32,6 +32,16 @@
                 {% endif %}
             </div>
             <i class="fa-solid fa-heart" onclick="plus();"></i>
+            <div>
+                <form action="{% url 'likes' %}" method='POST'>
+                  {% csrf_token %}
+                  {% if user in post.like_users.all %}
+                    <input type="submit" value='좋아요 취소'>
+                  {% else %}
+                    <input type="submit" value='좋아요'>
+                  {% endif %}
+                </form>
+              </div>
             <div class="cha-title">{{ post.title }}</div>
             <div class="menubar">
                 <p>기본정보</p>

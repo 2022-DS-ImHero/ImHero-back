@@ -8,4 +8,6 @@ urlpatterns= [
 
     path('company/detail/<int:post_id>/', views.c_detail, name="c_detail"),
     path('senior/detail/<int:post_id>/', views.s_detail, name="s_detail"),
+
+    path('professor/detail/<int:post_id>/likes/', views.likes, name='likes'),
 ]
