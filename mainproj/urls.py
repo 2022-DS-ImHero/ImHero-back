@@ -36,5 +36,6 @@ urlpatterns = [
     path('challenge/', views.challenge, name='challenge'),
 
     path('info/', views.info, name='info'),
-    path('mypage/', views.mypage, name='mypage')
+    path('mypage/', views.mypage, name='mypage'),
+    path('logout/', views.logout, name="logout"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

@@ -5,6 +5,7 @@ from .forms import IdeaPostModelForm, CrewPostModelForm
 from .models import IdeaPost, CrewPost, Tag
 from django.views.generic import CreateView
 from django.urls import reverse
+from django.contrib import auth
 
 class CrewPostCreate(CreateView):
     
@@ -68,3 +69,7 @@ def info(request):
 
     return render(request, 'info.html', {'cnterName': cnterName})
 
+
+def logout(request):
+    auth.logout(request)
+    return redirect('home')

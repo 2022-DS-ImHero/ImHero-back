@@ -39,8 +39,8 @@ def infoParsing():
     xmlObject = xmltodict.parse(req)
     allData = xmlObject['response']
 
-    print(allData)
-    # return allData
+    # print(allData)
+    return allData
 
     # queryParams = '?' + parse.urlencode({
     #     parse.quote_plus('ServiceKey') : key,
@@ -84,7 +84,7 @@ def infoParsing():
 #
     #print(allData)
 #
-infoParsing()
+# infoParsing()
 
 
     #dkey = requests.utils.unquote(key)
