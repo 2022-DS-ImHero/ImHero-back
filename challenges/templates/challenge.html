@@ -1,0 +1,55 @@
+<!--전체 카테고리 보여주기-->
+{% for c in all_category %}  
+    <a class="tag-content" href="{{ c.get_absolute_url }}">{{ c.name }}</a> 
+{% endfor %}
+
+
+<!--전체 게시물 보여주기 -->
+                    {% for post in posts %}
+                    <a href="">
+                        <div class="chaDiv">
+                        <img src="{{ post.image.url }}" width="300px" height="300px">
+                        <div class="cha-tag">
+                            {% if post.tags.exists %}
+                                {% for tag in post.tags.all %}
+                                    #{{ tag | truncatechars:7 }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="cha-t">{{ post.title | truncatechars:13 }}</div>
+                        <div class="cha-date">{{ post.date | date:'Y.m.d' }}까지</div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+                {% if post_list.exists %}
+                {% for p in post_list %}
+                <a href="">
+                    <div class="crewDiv">
+                        <div class="crewT">
+                            <img src="{{ p.image.url }}" width="300px" height="300px">
+                        <div class="cha-tag">
+                            {% if p.tags.exists %}
+                                {% for tag in p.tags.all %}
+                                    #{{ tag | truncatechars:7 }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="cha-t">{{ p.title | truncatechars:13 }}</div>
+                        <div class="cha-date">{{ p.date | date:'Y.m.d' }}까지</div>
+                        </div>
+                        <div class="TageName">
+                            {% if p.category.exists %}
+    
+                                {% for category in p.category.all %}
+                                <a href="{{ category.get_absolute_url }}"><span class="badge bg-light">#{{ category }} </span></a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endif %}
+
+                
