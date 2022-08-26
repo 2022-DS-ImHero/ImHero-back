@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .parser import desParsing, locationParsing, placeParsing
 from .forms import IdeaPostModelForm, CrewPostModelForm
 from .models import IdeaPost, CrewPost, Tag
+from challenges.models import Post
 from django.views.generic import CreateView
 from django.urls import reverse
 from django.contrib import auth
@@ -57,7 +58,7 @@ def tag_page(request, slug):
 #     return render(request,'challenge.html')
 
 def mypage(request):
-    posts = CrewPost.objects.order_by('-created')
+    posts = Post.objects.order_by('-date')
     return render(request, 'mypage.html', {'posts':posts})
 
 def info(request):
