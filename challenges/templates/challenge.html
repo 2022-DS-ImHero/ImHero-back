@@ -6,7 +6,7 @@
 
 <!--전체 게시물 보여주기 -->
                     {% for post in posts %}
-                    <a href="">
+                    <a href="{% url 'detail' post.id %}">
                         <div class="chaDiv">
                         <img src="{{ post.image.url }}" width="300px" height="300px">
                         <div class="cha-tag">
@@ -22,7 +22,7 @@
                     </a>
                     {% endfor %}
                 </div>
-
+<!--해당 카테고리 게시글 보여주기-->
                 {% if post_list.exists %}
                 {% for p in post_list %}
                 <a href="">

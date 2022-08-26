@@ -63,11 +63,15 @@ def info(request):
     res = placeParsing()
 
     cnterName = {}
-    
+    location = {}
+    description = {}
+
     for number in range(30):
         cnterName[res[number]['cnterNm']] = res[number]['adr']  # key: cnterNm, value: adr
+        location[res[number]['lo']] = res[number]['la'] # key: lo, value: la
+        description[res[number]['cnterNm']] = res[number]['cnterIntrcn'] # key: cnterNm, value: cnterIntrcn
 
-    return render(request, 'info.html', {'cnterName': cnterName})
+    return render(request, 'info.html', {'cnterName': cnterName, 'location':location, 'description':description})
 
 
 def logout(request):

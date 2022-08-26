@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import Post, Category
+from django.shortcuts import render, get_object_or_404
+from .models import ChallengeTag, Post, Category
 from django.views.generic import ListView
 from django.urls import reverse
 # Create your views here.
@@ -31,3 +31,10 @@ def category_page(request, slug):
     post_list = category.post_set.all()
 
     return render(request, 'challenge.html',{'post_list' : post_list, 'category' : category})
+
+def detail(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    tags = ChallengeTag.objects.all()
+    category = Category.objects.all()
+    
+    return render(request, 'challengeDetail.html', {'post':post, 'tags':tags, 'category':category})
