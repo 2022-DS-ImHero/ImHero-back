@@ -1,0 +1,36 @@
+
+
+#menu_wrap {
+    color: white;
+    overflow-y:scroll;
+    background:none;
+    font-size:12px;
+    border-radius: 10px;
+    width: 40vh;
+    height: 20vh;
+}
+
+
+@media screen and (max-width:1799px) {
+    /* 데스크탑 */#map{
+    width: 30vw;
+    height:30vw;
+    margin-top: 4%;
+    margin-left: 3vw;
+    }
+    .info-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+    }
+    .giveinfo{
+        background: #DFF2FF;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        width: 30vw;
+        height:15vw;
+        margin-top: 8vw;
+        padding: 2%;
+    }
+    }
+    

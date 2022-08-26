@@ -4,7 +4,13 @@
     border-bottom: 1px solid gray;
     padding-bottom: 15px;
 }
-
+.commentform {
+    width: 110%;
+    height: 45px;
+                    
+    border: 1px solid #7E7E7E;
+    border-radius: 5px;
+}
 .detail img{
     display: block;
     width: 100%;

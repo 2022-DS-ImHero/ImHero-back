@@ -56,7 +56,7 @@
 
 .intro{
 
-    width: 200px;
+    width: fit-content;
     height: 19px;
 
     font-family: 'Inter';
@@ -65,8 +65,9 @@
     font-size: 16px;
     line-height: 35px;
     text-align: center;
-    margin: 0 auto;
+    margin-left: 665px;
     color: #000000;
+
 }
 
 .jandi{
@@ -85,9 +86,10 @@
 }
 
 .jandihaaa{
-    background-color: blanchedalmond;
-    width: 65vw;
-    height: 20vh;
+    background-image: url('../img/jandi.png');
+    background-size: cover;
+    width: 50vw;
+    height: 30vh;
     margin: 0 auto;
 }
 
@@ -127,231 +129,35 @@
     padding: 2%;
 }
 
-@media screen and (max-width:1799px) {
+
     /* 데스크탑 */
     .chaDiv{
-        width: 12vw;
-        height: 30vh;
-        background: #ffffff;
-        border: 1px solid #CFCFCF;
-        margin-left: 100px;
-        padding: 0;
-    }
-    
-    .chaDiv img{
-        width: 12vw;
-        height: 15vh;
-        border-bottom: 1px solid #CFCFCF;
-    }
-    
-    .cha-tag{
-        font-family: 'IM FELL Double Pica';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 32px;
-        padding-left: 2%;
-        color: #7E7E7E;
-        border-bottom: 1px solid #CFCFCF;
-        
-    }
-
-    .cha-t{
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 42px;
-        padding-left: 2%;
-        color: #000000;
-        border-bottom: 1px solid #CFCFCF;
-    }
-
-    .cha-date{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 32px;
-        text-align: center;
-
-        color: #000000;
-
-    }
-    }
-    
-@media screen and (max-width:1280px) {
-/* 타블렛 가로 */ 
-.chaDiv{
-    width: 13vw;
-    height: 30vh;
-    background: #ffffff;
-    border: 1px solid #CFCFCF;
-    margin-left: 100px;
-    padding: 0;
-}
-
-.chaDiv img{
-    width: 13vw;
-    height: 15vh;
-    border-bottom: 1px solid #CFCFCF;
-}
-
-.cha-tag{
-    font-family: 'IM FELL Double Pica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 32px;
-    padding-left: 2%;
-    color: #7E7E7E;
-    border-bottom: 1px solid #CFCFCF;
-    
-}
-
-.cha-t{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 42px;
-    padding-left: 2%;
-    color: #000000;
-    border-bottom: 1px solid #CFCFCF;
-}
-
-.cha-date{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 32px;
-    text-align: center;
-
-    color: #000000;
-
-}
-
-}
-@media screen and (max-width:899px) {
-    .chaDiv{
-        width: 30vw;
-        height: 20vh;
-        background: #ffffff;
-        border: 1px solid #CFCFCF;
-        margin-left: 100px;
-        padding: 0;
-    }
-    
-    .chaDiv img{
-        width: 33vw;
-        height: 13vh;
-        border-bottom: 1px solid #CFCFCF;
-    }
-    
-    .cha-tag{
-        font-family: 'IM FELL Double Pica';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 32px;
-        padding-left: 2%;
-        color: #7E7E7E;
-        border-bottom: 1px solid #CFCFCF;
-        
-    }
-
-    .cha-t{
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 42px;
-        padding-left: 2%;
-        color: #000000;
-        border-bottom: 1px solid #CFCFCF;
-    }
-
-    .cha-date{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 32px;
-        text-align: center;
-
-        color: #000000;
-
-    }
-}
-@media screen and (max-width:599px) {
-    /* 모바일 세로 */
-    .chaDiv{
-        width: 30vw;
-        height: 20vh;
-        background: #ffffff;
-        border: 1px solid #CFCFCF;
-        margin-left: 100px;
-        padding: 0;
-    }
-    
-    .chaDiv img{
-        width: 35vw;
-        height: 11vh;
-        border-bottom: 1px solid #CFCFCF;
-    }
-    
-    .cha-tag{
-        font-family: 'IM FELL Double Pica';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 30px;
-        padding-left: 2%;
-        color: #7E7E7E;
-        border-bottom: 1px solid #CFCFCF;
-        
-    }
-
-    .cha-t{
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 42px;
-        padding-left: 2%;
-        color: #000000;
-        border-bottom: 1px solid #CFCFCF;
-    }
-
-    .cha-date{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 32px;
-        text-align: center;
-
-        color: #000000;
-
-    }
-}
-
-@media screen and (max-width:420px) {
-    /* 모바일 세로 */
-    .chaDiv{
-        width: 38vw;
-        height: 20vh;
-        background: #ffffff;
-        border: 1px solid #CFCFCF;
+        width: 14vw;
+        height: 32vh;
+        background: #DDEBFF;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        margin-right:30px ;
         margin-left: 30px;
-        padding: 0;
     }
     
     .chaDiv img{
-        width: 38vw;
-        height: 10vh;
-        border-bottom: 1px solid #CFCFCF;
+        width: 12vw;
+        height: 14vh;
+        margin-top: 10px;
+        margin-left: 18px;
+        
+
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
     }
     
     .cha-tag{
         font-family: 'IM FELL Double Pica';
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 32px;
         padding-left: 2%;
         color: #7E7E7E;
         border-bottom: 1px solid #CFCFCF;
@@ -360,8 +166,8 @@
 
     .cha-t{
         font-weight: 400;
-        font-size: 13px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 42px;
         padding-left: 2%;
         color: #000000;
         border-bottom: 1px solid #CFCFCF;
@@ -371,14 +177,15 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 13px;
-        line-height: 28px;
+        font-size: 14px;
+        line-height: 32px;
         text-align: center;
 
         color: #000000;
 
+    
     }
-}
+    
 
 
 .myC-div a{

@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import ChallengeTag, Post, Category
 from django.views.generic import ListView
 from django.urls import reverse
+from .forms import CommentForm
 # Create your views here.
 
 class PostList(ListView):
@@ -36,5 +37,18 @@ def detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     tags = ChallengeTag.objects.all()
     category = Category.objects.all()
-    
-    return render(request, 'challengeDetail.html', {'post':post, 'tags':tags, 'category':category})
+
+    comment_form = CommentForm()
+
+    return render(request, 'challengeDetail.html', {'post':post, 'tags':tags, 'category':category, 'comment_form':comment_form})
+
+def create_comment(request, post_id):
+    filled_form = CommentForm(request.POST)
+
+    if filled_form.is_valid():
+        finished_form = filled_form.save(commit=False)
+        finished_form.post = get_object_or_404(Post, pk=post_id)
+        finished_form.user = request.user
+        finished_form.save()
+
+    return redirect('detail', post_id) 

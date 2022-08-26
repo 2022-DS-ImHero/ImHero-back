@@ -43,9 +43,63 @@
             <div class="detail-content">
                 {{ post.content }}
             </div>
+            <div class="commentSection">
+                <div>댓글 목록 ( {{ post.comment_set.all.count }} )</div>
+                
+    
+                
+            <div class="dat" style="padding-left:200px;padding-right: 200px">
+                <div class="d1" style="border-bottom: 1px solid 7E7E7E;">
+                    댓글쓰기
+                </div>
 
-            <button type="submit" class="cha-sub">제출하기</button>
-        </div>
+                <div>
+                    <form method="POST" action="{% url 'create_comment' post.id %}">
+                        {% csrf_token %}
+                        {{ comment_form }}
+                        <input type="submit">
+                  </form>
+                   
+                </div>
+
+            <div class="d2">
+                <div style="font-family: 'Noto Sans KR';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 22px;
+                /* or 110% */
+                
+                display: gird;
+                align-items: center;
+                
+                color: #000000;"
+                >{% for comment in post.comment_set.all %}
+                <p>{{ comment.user }}</p >
+                    {{ comment }}
+                <hr>
+                {% endfor %}</div>
+                <div 
+                style="
+                width: 365px;
+                height: 44px;
+                
+                font-family: 'Noto Sans KR';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                /* or 138% */
+                
+                display: flex;
+                align-items: center;
+                
+                color: #000000;
+                ">
+            </div>
+            
+    </div>
+</div>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html> 

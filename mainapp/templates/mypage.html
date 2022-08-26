@@ -39,68 +39,24 @@
                     <p class="myCha">Challenge</p>
                         <div class="myClist">
         
-                            <a href="">
+                            
+                            {% for post in posts %}
+                            <a href="{% url 'detail' post.id %}">
                                 <div class="chaDiv">
-                                <img src="{% static 'img/pool1.jpg' %}">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
+                                <img src="{{ post.image.url }}">
+                                <div class="cha-tag">
+                                    {% if post.tags.exists %}
+                                    {% for tag in post.tags.all %}
+                                        #{{ tag | truncatechars:7 }}
+                                    {% endfor %}
+                                    {% endif %}</div>
+                                <div class="cha-t">{{ post.title | truncatechars:13 }}</div>
+                                <div class="cha-date">{{ post.date | date:'Y.m.d' }}까지</div>
                                 </div>
                             </a>
+                            {% endfor %}
         
-                            <a href="">
-                                <div class="chaDiv">
-                                <img src="/img/pool1.jpg">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
-                                </div>
-                            </a>
-        
-                            <a href="">
-                                <div class="chaDiv">
-                                <img src="/img/pool1.jpg">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
-                                </div>
-                            </a>
-
-                            <a href="">
-                                <div class="chaDiv">
-                                <img src="/img/pool1.jpg">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="chaDiv">
-                                <img src="/img/pool1.jpg">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
-                                </div>
-                            </a>
-        
-        
-                            <a href="">
-                                <div class="chaDiv">
-                                <img src="/img/pool1.jpg">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
-                                </div>
-                            </a>
-        
-                            <a href="">
-                                <div class="chaDiv">
-                                <img src="/img/pool1.jpg">
-                                <div class="cha-tag">태그이름</div>
-                                <div class="cha-t">문자인식 앱 개발 챌린지</div>
-                                <div class="cha-date">2022.9.5까지</div>
-                                </div>
-                            </a>
+                           
         
 
         

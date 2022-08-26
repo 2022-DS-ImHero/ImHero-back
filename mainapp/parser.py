@@ -21,6 +21,32 @@ def placeParsing():
     # print(allData)
     return allData
 
+def locationParsing():
+    area = "서울"
+    
+    url = 'https://apis.data.go.kr/B552735/workspaceErumService/getAreaCenterList?serviceKey='+key+'&area='+ area
+
+    req = requests.get(url, verify=False).content 
+
+    xmlObject = xmltodict.parse(req)
+    locationData = xmlObject['items']['item']
+
+    # print(allData)
+    return locationData
+
+def desParsing():
+    area = "서울"
+    
+    url = 'https://apis.data.go.kr/B552735/workspaceErumService/getAreaCenterList?serviceKey='+key+'&area='+ area
+
+    req = requests.get(url, verify=False).content 
+
+    xmlObject = xmltodict.parse(req)
+    desData = xmlObject['items']['item']
+
+    # print(allData)
+    return desData
+
 def infoParsing():
 
     url = 'http://openapi.kised.or.kr/openapi/service/rest/ContentsService/getAnnouncementList'

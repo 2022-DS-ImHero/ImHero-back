@@ -34,7 +34,7 @@ urlpatterns = [
     path('upload_crew/', views.CrewPostCreate.as_view(), name='uploadCrew'),
  
     path('challenge/', include('challenges.urls')),
-
+    path('rank/', views.rank, name='rank'),
     path('info/', views.info, name='info'),
     path('mypage/', views.mypage, name='mypage'),
     path('logout/', views.logout, name="logout"),

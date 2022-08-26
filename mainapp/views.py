@@ -1,6 +1,6 @@
 from pickletools import read_uint1
 from django.shortcuts import render, redirect, get_object_or_404
-from .parser import placeParsing
+from .parser import desParsing, locationParsing, placeParsing
 from .forms import IdeaPostModelForm, CrewPostModelForm
 from .models import IdeaPost, CrewPost, Tag
 from django.views.generic import CreateView
@@ -57,22 +57,23 @@ def tag_page(request, slug):
 #     return render(request,'challenge.html')
 
 def mypage(request):
-    return render(request, 'mypage.html')
+    posts = CrewPost.objects.order_by('-created')
+    return render(request, 'mypage.html', {'posts':posts})
 
 def info(request):
     res = placeParsing()
 
+
     cnterName = {}
-    location = {}
-    description = {}
 
     for number in range(30):
         cnterName[res[number]['cnterNm']] = res[number]['adr']  # key: cnterNm, value: adr
-        location[res[number]['lo']] = res[number]['la'] # key: lo, value: la
-        description[res[number]['cnterNm']] = res[number]['cnterIntrcn'] # key: cnterNm, value: cnterIntrcn
+       
 
-    return render(request, 'info.html', {'cnterName': cnterName, 'location':location, 'description':description})
+    return render(request, 'info.html', {'cnterName': cnterName})
 
+def rank(request):
+    return render(request, 'rank.html')
 
 def logout(request):
     auth.logout(request)

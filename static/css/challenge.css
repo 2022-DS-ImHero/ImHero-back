@@ -38,12 +38,14 @@
 
 .cha-content a{
     text-decoration: none;
+    color: #000000;
 }
 
 
-@media screen and (max-width:1799px) {
+
     /* 데스크탑 */
     
+
     .chaDiv{
         width: 14vw;
         height: 32vh;
@@ -64,7 +66,6 @@
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 15px;
     }
-    
     .cha-tag{
         font-family: 'IM FELL Double Pica';
         font-style: normal;
@@ -97,7 +98,6 @@
         color: #000000;
 
     }
-    }
 
 
 .pro{
@@ -116,4 +116,19 @@
     display: flex;
     flex-direction: row;
     overflow-x:scroll ;
+}
+
+
+.tag-btn button{
+    border: none;
+    margin-top: 10px;
+    width: 70px;
+    height: 42px;
+    margin-left: 20px;
+    background: #DAEDFF;
+    border-radius: 20px;
+}
+
+.tag-btn button:nth-child(1){
+    margin-left: 640px;
 }

@@ -10,9 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+Double+Pica" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+English" />
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8488ab8ec78c1a935c3b79b2fc8f5ba9&libraries=services"></script>
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/maps.css' %}">
     <title>ideaup</title>
 </head>
 <body>
@@ -36,14 +34,14 @@
 
                 {% for key, value in cnterName.items %}
                     <a href="">
-                        <div class="suDiv2" onclick="findmap();">
+                        <div class="suDiv2">
                             {{ key }}
                             <br>{{ value }}
                         </div>
                     </a>
                 {% endfor %}
 
-
+                <!--지도, 설명-->
 
             </div>
 
